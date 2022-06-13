@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220406 12:54:27.471" rpa="false" schemaversion="2">
+<suite id="s1" name="devFinance tests" source="C:\Users\Elielson\Documents\robotFramework-web_dev-finance\devFinance_tests.robot">
+<test id="s1-t1" name="Caso de teste 03 - Remover transações">
+<kw name="Abrir navegador" library="devFinance_resorces" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220406 12:54:27.767" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220406 12:54:27.767" endtime="20220406 12:54:29.053"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220406 12:54:29.053" endtime="20220406 12:54:29.173"/>
+</kw>
+<status status="PASS" starttime="20220406 12:54:27.766" endtime="20220406 12:54:29.174"/>
+</kw>
+<kw name="Acessar a página devfinance-agilizei" library="devFinance_resorces">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220406 12:54:29.175" level="INFO">Opening url 'https://devfinance-agilizei.netlify.app/#'</msg>
+<status status="PASS" starttime="20220406 12:54:29.175" endtime="20220406 12:54:29.470"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//img[contains(@alt,'Logo Dev Finance')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:54:29.471" endtime="20220406 12:54:29.518"/>
+</kw>
+<status status="PASS" starttime="20220406 12:54:29.174" endtime="20220406 12:54:29.518"/>
+</kw>
+<kw name="Cadastrar uma entrada" library="devFinance_resorces">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[contains(@onclick,'Modal.open()')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.520" level="INFO">Clicking element '//a[contains(@onclick,'Modal.open()')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.520" endtime="20220406 12:54:29.590"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'text')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.590" level="INFO">Clicking element '//input[contains(@type,'text')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.590" endtime="20220406 12:54:29.646"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'text')]</arg>
+<arg>text=Sálario</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.647" level="INFO">Typing text 'Sálario' into text field '//input[contains(@type,'text')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.647" endtime="20220406 12:54:29.708"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'number')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.709" level="INFO">Clicking element '//input[contains(@type,'number')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.708" endtime="20220406 12:54:29.758"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'number')]</arg>
+<arg>text=3000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.759" level="INFO">Typing text '3000' into text field '//input[contains(@type,'number')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.759" endtime="20220406 12:54:29.833"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'date')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.833" level="INFO">Clicking element '//input[contains(@type,'date')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.833" endtime="20220406 12:54:29.883"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'date')]</arg>
+<arg>text=04-06-2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.884" level="INFO">Typing text '04-06-2022' into text field '//input[contains(@type,'date')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.884" endtime="20220406 12:54:29.952"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Salvar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:29.953" level="INFO">Clicking element '//button[contains(.,'Salvar')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:29.952" endtime="20220406 12:54:29.996"/>
+</kw>
+<status status="PASS" starttime="20220406 12:54:29.519" endtime="20220406 12:54:29.996"/>
+</kw>
+<kw name="Cadastrar saida" library="devFinance_resorces">
+<kw name="Acessar a página devfinance-agilizei" library="devFinance_resorces">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220406 12:54:29.998" level="INFO">Opening url 'https://devfinance-agilizei.netlify.app/#'</msg>
+<status status="PASS" starttime="20220406 12:54:29.998" endtime="20220406 12:54:30.064"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//img[contains(@alt,'Logo Dev Finance')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:54:30.065" endtime="20220406 12:54:30.092"/>
+</kw>
+<status status="PASS" starttime="20220406 12:54:29.997" endtime="20220406 12:54:30.093"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[contains(@onclick,'Modal.open()')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.093" level="INFO">Clicking element '//a[contains(@onclick,'Modal.open()')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.093" endtime="20220406 12:54:30.133"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'text')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.133" level="INFO">Clicking element '//input[contains(@type,'text')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.133" endtime="20220406 12:54:30.177"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'text')]</arg>
+<arg>text=compra</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.177" level="INFO">Typing text 'compra' into text field '//input[contains(@type,'text')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.177" endtime="20220406 12:54:30.233"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'number')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.233" level="INFO">Clicking element '//input[contains(@type,'number')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.233" endtime="20220406 12:54:30.275"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'number')]</arg>
+<arg>text=-500</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.275" level="INFO">Typing text '-500' into text field '//input[contains(@type,'number')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.275" endtime="20220406 12:54:30.339"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'date')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.340" level="INFO">Clicking element '//input[contains(@type,'date')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.339" endtime="20220406 12:54:30.381"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@type,'date')]</arg>
+<arg>text=04-06-2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.382" level="INFO">Typing text '04-06-2022' into text field '//input[contains(@type,'date')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.382" endtime="20220406 12:54:30.450"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Salvar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.450" level="INFO">Clicking element '//button[contains(.,'Salvar')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.450" endtime="20220406 12:54:30.491"/>
+</kw>
+<status status="PASS" starttime="20220406 12:54:29.997" endtime="20220406 12:54:30.492"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=id=data-table</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220406 12:54:30.492" endtime="20220406 12:54:30.516"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//img[contains(@onclick,'Transaction.remove(0)')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.517" level="INFO">Clicking element '//img[contains(@onclick,'Transaction.remove(0)')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.517" endtime="20220406 12:54:30.563"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//img[contains(@onclick,'Transaction.remove(0)')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220406 12:54:30.564" level="INFO">Clicking element '//img[contains(@onclick,'Transaction.remove(0)')]'.</msg>
+<status status="PASS" starttime="20220406 12:54:30.564" endtime="20220406 12:54:30.608"/>
+</kw>
+<kw name="Fechar navegador" library="devFinance_resorces" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220406 12:54:30.714" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220406 12:54:30.609" endtime="20220406 12:54:30.714"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220406 12:54:30.714" endtime="20220406 12:54:32.923"/>
+</kw>
+<status status="PASS" starttime="20220406 12:54:30.609" endtime="20220406 12:54:32.923"/>
+</kw>
+<doc>Esse teste remove transações</doc>
+<tag>remoção</tag>
+<status status="PASS" starttime="20220406 12:54:27.765" endtime="20220406 12:54:32.923"/>
+</test>
+<doc>Essa suite testa a aplicação dev-finance</doc>
+<status status="PASS" starttime="20220406 12:54:27.473" endtime="20220406 12:54:32.926"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">remoção</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="devFinance tests">devFinance tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
